@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--방법 1 : 직접 다운로드 (jquery.js 파일을 다운로드 해서 파일 위치를 제공)-->
+<!--방법 2 : cdn 링크 활용, 대신 인터넷 연결 필요-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+
+</script>
+
+<script>
+    //JQuery 사용하려면 $
+    // window.jQuery 사용할 거를 $ 하나만으로 사용
+    $(document).ready(function(){ // document가 ready(라는 이벤트 함수) 되면 함수 안에 실행하겠다
+        $("p").css("color","blue"); // p태그의 color 속성을 blue로 변경
+        $("h1","p").css("color","red"); //h1, p태그 동시 선택해서 color 변경
+        $("h1#target") // h1태그 중에 id 가 target 인 요소
+        $("body > * ").css("color","green"); // body 밑 모든 요소 color 를 green으로 변경
+        $("input[type='text']").val("Hello"); //input 태그의 type 속성이 text인 요소 val를 Hello로 변경
+    })
+
+</script>
+<body>
+    <p>p태그 입니다.</p>
+    <h1>h1 태그 입니다.</h1>
+    <input type="text"/>
+</body>
+
+</html>
